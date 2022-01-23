@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var number =  prompt('Vnesetego mobilniot broj');
+        let n = parseInt(number);
+        if(n == number){
+            let x = parseInt(number/1000000)
+            let y = parseInt(number/1000%1000)
+            let z = parseInt(number%1000)
+            document.write('0' + x + '/'+ y + '-' + z);
+            if(x%10 == 0 || x%10 == 1 || x%10 == 2 || x%10 == 3 || x%10 == 4){
+                document.writeln("<br/>T-mobile");
+            }else if(x%10 == 5 || x%10 == 6){
+                document.writeln('<br/>One');
+            }else {
+                document.writeln('<br/>Vip');
+            }
+        }else alert('Neavlidno vnesen broj');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

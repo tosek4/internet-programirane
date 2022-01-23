@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        let str = prompt("Внеси го стрингот: ");
+        nstr = str.split(" ");
+        let flag = 0;
+        let k
+        for(let i=0; i < nstr.length;++i){
+            if(flag == 0){
+                x = nstr[0].length;
+                k = i;
+                flag = 1;
+            }
+            if(x < (nstr[i].length) ){
+                x = nstr[i].length;
+                k = i;
+            }
+        }
+
+           document.writeln(nstr[k]);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
