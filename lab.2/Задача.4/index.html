@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        input{
+            width: 30px;
+            margin: 2px;
+        }
+        button{
+            margin: 5px 2px;
+
+        }
+    </style>
+    <script type="text/javascript">
+        function sum(){
+            let num1 = document.getElementById("number1").value;
+            let imaginary1 = document.getElementById("imaginary1").value;
+            let num2 = document.getElementById("number2").value;
+            let imaginary2 = document.getElementById("imaginary2").value;
+            let numsum = document.getElementById("numbersum");
+            let imaginarysum = document.getElementById("imaginarysum");
+
+
+
+            if(num1 == "" || imaginary1 == "" || num2 == "" || imaginary2 == ""){
+                return alert("Vnesigi site polina!")
+            }
+
+            num1 = parseInt(num1);
+            num2 =parseInt(num2);
+            imaginary1 = parseInt(imaginary1);
+            imaginary2 = parseInt(imaginary2);
+            if((num1[0] == "-" || !isNaN(num1)) && ( num2[0] == "-"  || !isNaN(num2)) && (imaginary1[0] == "-" || !isNaN(imaginary1))  && (imaginary2[0] == "-" || !isNaN(imaginary2))) {
+                numsum.value = parseInt(num1) + parseInt(num2);
+                imaginarysum.value = parseInt(imaginary1) + parseInt(imaginary2);
+
+            }else {
+
+                alert("Nevaliden vnes!");
+            }
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+<div>
+    <label>
+        <input type="text" id="number1"  >
+        <input type="text" id="imaginary1"><span><i>i</i></span>
+    </label>
+</div>
+<div>
+    <label>
+        <input type="text" id="number2"  >
+        <input type="text" id="imaginary2" ><span><i>i</i></span>
+    </label>
+</div>
+<button type="button" onclick="sum();" value="Add" >Add</button>
+<div>
+    <label>
+        <input type="text" id="numbersum" >
+        <input type="text" id="imaginarysum" ><span><i>i</i></span>
+    </label>
+</div>
+</body>
+</html>
